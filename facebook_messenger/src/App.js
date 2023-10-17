@@ -1,5 +1,7 @@
 
 import { useState } from 'react';
+// import { Button } from '@material-ui/core';
+import Button from '@mui/material/Button';
 import './App.css';
 
 function App() {
@@ -28,10 +30,12 @@ function App() {
           
           
           {/* button */}
-              <button
+              <Button
+              disabled = {!input}
+              variant = "outlined"
               onClick = {sendMessage}
               type ='submit'
-              >Send Message</button>
+              >Send Message</Button>
         </form>
        
 
