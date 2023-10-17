@@ -11,6 +11,8 @@ function App() {
   console.log(messages);
 
   const sendMessage = (event) => {
+    
+      event.preventDefault();
       console.log('I am working');
       // all the logic to send a message goes here
       setMessages([...messages, input]);
