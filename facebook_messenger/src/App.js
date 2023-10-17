@@ -21,15 +21,22 @@ function App() {
       <h1>Let's build the Facebook Messenger Clone</h1>
       {/* input field
        */}
-       <input value ={input} onChange = {event => setInput(event.target.value)}/>
+       <form>
+         <input value ={input} onChange = {event => setInput(event.target.value)}/>
+          
+          
+          {/* button */}
+              <button
+              onClick = {sendMessage}
+              type ='submit'
+              >Send Message</button>
+        </form>
+       
 
-       {/* button */}
-        <button
-        onClick = {sendMessage}
-        >Send Message</button>
+       
 
         {/* messages themselves */}
-        
+
         {
           messages.map(message => (
             <p>{message}</p>
